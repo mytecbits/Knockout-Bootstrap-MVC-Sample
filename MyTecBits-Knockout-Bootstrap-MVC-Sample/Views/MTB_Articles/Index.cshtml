@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Articles | My Tec Bits";
+}
+<h2>Articles</h2>
+<p>
+    <a href="@Url.Action("Create", "MTB_Articles")" class="btn btn-primary btn-large">Create New »</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Excerpts</th>
+            <th>Content</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Articles">
+        <tr>
+            <td data-bind="text: Title"></td>
+            <td data-bind="text: Excerpts"></td>
+            <td data-bind="text: Content"></td>
+        </tr>
+    </tbody>
+</table>
+@section Scripts {
+   @Scripts.Render("~/Scripts/ViewModel/IndexVM.js")
+}

@@ -1,0 +1,36 @@
+﻿@model MyTecBits_Knockout_Bootstrap_MVC_Sample.Models.MTB_Article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>MTB_Article</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Excerpts)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Excerpts)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Content)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Content)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

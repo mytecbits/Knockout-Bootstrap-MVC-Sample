@@ -1,0 +1,30 @@
+﻿<div class="span12">
+    <fieldset>
+        <legend>Create Articles</legend>
+        <div class="control-group">
+            <label class="control-label">Title: </label>
+            <div class="controls">
+                <input type="text" data-bind="value: Title" placeholder="Article Title" class="input-medium">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Excerpts: </label>
+            <div class="controls">
+                <textarea data-bind="value: Excerpts" placeholder="Article Excerpts" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Content: </label>
+            <div class="controls">
+                <textarea data-bind="value: Content" placeholder="Article Content" rows="6" class="input-xxlarge"></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <input type="button" value="Save" data-bind="click: btnCreateArticle" class="btn btn-primary" />
+            <a href="@Url.Action("", "MTB_Articles")" class="btn btn-primary">Cancel</a>
+        </div>
+    </fieldset>
+</div>
+@section Scripts {
+   @Scripts.Render("~/Scripts/ViewModel/CreateVM.js")
+}

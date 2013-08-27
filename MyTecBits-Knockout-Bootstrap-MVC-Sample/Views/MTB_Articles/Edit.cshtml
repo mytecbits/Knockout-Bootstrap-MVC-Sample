@@ -1,0 +1,54 @@
+﻿@model MyTecBits_Knockout_Bootstrap_MVC_Sample.Models.MTB_Article
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MTB_Article</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Excerpts)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Excerpts)
+            @Html.ValidationMessageFor(model => model.Excerpts)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Content)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Content)
+            @Html.ValidationMessageFor(model => model.Content)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
